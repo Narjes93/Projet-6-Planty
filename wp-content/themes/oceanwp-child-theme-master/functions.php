@@ -31,3 +31,27 @@ function oceanwp_child_enqueue_parent_style() {
 }
 
 add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
+
+function ajouter_admin_menu( $items, $args ) {
+    if ( $args->theme_location == 'main_menu' && is_user_logged_in() ) {
+        // Créer un lien vers la page d'administration
+        $admin_link = '<li id="menu-item-264"><a class="text-wrap" href="' . esc_url( admin_url() ) . '">Admin</a></li>';
+
+        // Trouver les positions des balises de fin </li> dans la chaîne $items
+        $end_tags_positions = [];
+        preg_match_all('/<\/li>/', $items, $end_tags_positions, PREG_OFFSET_CAPTURE);
+
+        // Calculer la position médiane des balises de fin </li>
+        $middle_position = ceil( count( $end_tags_positions[0] ) / 2 );
+
+        // Récupérer la position de l'élément du menu à insérer après
+        $position = $end_tags_positions[0][$middle_position - 1][1];
+
+        // Insérer le lien "Admin" après l'élément du menu à la position calculée
+        $items = substr_replace( $items, $admin_link, $position + 5, 0 );
+    }
+
+    return $items;
+}
+add_filter( 'wp_nav_menu_items', 'ajouter_admin_menu', 10, 2 );
+

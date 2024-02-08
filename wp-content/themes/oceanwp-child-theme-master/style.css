@@ -10,6 +10,217 @@ Version: 1.0
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
 
-#arriereplan{
-    background-color: aquamarine;
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&display=swap');
+
+/* logo */
+#site-logo{
+    width: 25% !important;
+    height:25% !important;
+    
+}
+
+/* Menu */
+.main-menu li{
+    margin-right: 20px;
+}
+#logo-menu-containe{
+    display: flex;
+    flex-direction: row;
+    
+}
+#menu-item-262{
+    background-color: #E0B9B4;
+    margin-right: 0;
+    height: 70px;
+    padding-left: 40px;
+    padding-right: 40px; 
+    display: flex !important;
+    order: 1 !important;
+}
+
+#menu-item-262:hover{
+    background-color: #C02E44;
+    color: white;
+}
+
+ #menu-item-262 .text-wrap {
+    color: rgb(255, 255, 255) !important;
+}
+
+#menu-item-263 .text-wrap{
+    color: black;
+}
+#menu-item-264 .text-wrap{
+    color: black !important;
+    font-family: 'syne'!important;
+    font-weight: 500 !important;
+    font-size: 15PX !important;
+}
+
+.search-toggle-li {
+    display: none;
+}
+
+.main-item{
+    font-family: 'syne';
+
+}
+.text-wrap{
+    
+    font-family: 'syne';
+    font-weight: 500;
+    font-size: 15PX;
+}
+#bouton{
+    align-items: center;
+}
+.bouton{
+    align-items: center;
+}
+.text-wrap:hover{
+    color:black;
+}
+
+.elementor-element-a98b77c{
+    background-color: #C02E44;
+}
+label{
+    font-family: 'syne';
+    font-weight: 400;
+    color: black;
+}
+.wpcf7-text{
+    background-color: white!important;
+    border-radius: 7px;
+
+}
+.wpcf7-textarea{
+    background-color: white!important;
+    border-radius: 7px;
+}
+
+#id-envoyer {
+    background-color:#E0B9B4 !important;
+    display: flex ;
+    justify-content: right !important;
+    color: white;
+    
+}
+.envoyer {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+#envoyer:hover{
+    background-color: #C02E44;
+}
+
+#block-7{
+    justify-content: center;
+    display: flex;
+}
+
+.case{
+    display: flex;
+    flex-direction: row !important;
+}
+.gouts{
+    margin: 6%;
+    
+}
+.case img{
+    width: 95%;
+    height: 25%;
+}
+.formule{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+
+}
+
+.formule label{
+    color: white !important;
+    font-family: 'syne';
+    font-size: 20px !important;
+    font-weight: 400;
+}
+.colonne1{
+    display: flex;
+    flex-direction: column;
+}
+.colonne2{
+    display: flex;
+    flex-direction: column;
+}
+
+.colonne1,
+.colonne2 {
+    flex: 1; /* Partager l'espace disponible entre les deux colonnes */
+    padding: 0 30px; /* Ajouter un peu d'espace entre le contenu et les bords des colonnes */
+}
+.colonne1 {
+    border-right: 1px solid white; /* Ajouter une bordure droite sur la première colonne */
+    padding-right: 70px; /* Ajouter un espacement à droite de la première colonne */
+}
+
+.colonne2 {
+    padding-left: 70px; /* Ajouter un espacement à gauche de la deuxième colonne */
+}
+.wpcf7-form-control-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.titre-commande{
+    color: white;
+    font-family: 'syne';
+    font-weight: 700;
+    font-size: 30px;
+    
+}
+.quantite  {
+    height: 50px;
+    width: 39px !important;
+    text-align: center !important;
+    background-color: white !important;
+    font-size: 20px !important;
+    padding-bottom: 15px !important;
+    border-radius: 0 !important;
+   
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+.page-container{
+    margin-top: 0;
+    
+}
+.formule {
+    border-top: 1px solid white; /* Ajouter une bordure supérieure pour créer une ligne horizontale */
+    padding-top: 50px; /* Ajouter un espace au-dessus de la bordure */
+}
+.commander {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 40px;
+    width: 100%;
+    
+    
+}
+#id-commander{
+    background-color:#E0B9B4 !important;
+    display: flex ;
+    justify-content: right !important;
+    border-radius: 5px;
+    color: white;
+}
+#id-commander:hover{
+    background-color:#C02E44 !important;  
+}
+.wpcf7-spinner {
+    display: none;
 }
