@@ -15,27 +15,29 @@ Version: 1.0
 /* logo */
 #site-logo{
     width: 25% !important;
-    height:25% !important;
-    
+    height:25% !important; 
+}
+
+#site-logo a:focus {
+    outline: none !important;
 }
 
 /* Menu */
 .main-menu li{
     margin-right: 20px;
 }
-#logo-menu-containe{
-    display: flex;
-    flex-direction: row;
-    
+
+#site-navigation a:focus {
+    outline: none !important;
 }
+
 #menu-item-262{
     background-color: #E0B9B4;
     margin-right: 0;
     height: 70px;
     padding-left: 40px;
     padding-right: 40px; 
-    display: flex !important;
-    order: 1 !important;
+    color: white !important;
 }
 
 #menu-item-262:hover{
@@ -44,7 +46,7 @@ Version: 1.0
 }
 
  #menu-item-262 .text-wrap {
-    color: rgb(255, 255, 255) !important;
+     color: white !important;
 }
 
 #menu-item-263 .text-wrap{
@@ -57,9 +59,7 @@ Version: 1.0
     font-size: 15PX !important;
 }
 
-.search-toggle-li {
-    display: none;
-}
+
 
 .main-item{
     font-family: 'syne';
@@ -71,24 +71,18 @@ Version: 1.0
     font-weight: 500;
     font-size: 15PX;
 }
-#bouton{
-    align-items: center;
-}
-.bouton{
-    align-items: center;
-}
+
+
 .text-wrap:hover{
     color:black;
 }
 
-.elementor-element-a98b77c{
-    background-color: #C02E44;
-}
 label{
     font-family: 'syne';
     font-weight: 400;
     color: black;
 }
+/*Formulaire de contact*/
 .wpcf7-text{
     background-color: white!important;
     border-radius: 7px;
@@ -102,7 +96,7 @@ label{
 #id-envoyer {
     background-color:#E0B9B4 !important;
     display: flex ;
-    justify-content: right !important;
+    justify-content: center !important;
     color: white;
     
 }
@@ -111,61 +105,49 @@ label{
     justify-content: center !important;
 }
 
-#envoyer:hover{
-    background-color: #C02E44;
+#id-envoyer:hover{
+    background-color: #C02E44 !important;
 }
-
-#block-7{
-    justify-content: center;
-    display: flex;
-}
-
+/*Formulaire de pre commande*/
 .case{
     display: flex;
     flex-direction: row !important;
-}
-.gouts{
-    margin: 6%;
-    
 }
 .case img{
     width: 95%;
     height: 25%;
 }
-.formule{
+.formulaire{
     display: flex;
     flex-direction: row;
     margin-top: 30px;
 
 }
 
-.formule label{
+.formulaire label{
     color: white !important;
     font-family: 'syne';
     font-size: 20px !important;
     font-weight: 400;
 }
-.colonne1{
-    display: flex;
-    flex-direction: column;
-}
-.colonne2{
-    display: flex;
-    flex-direction: column;
-}
+
 
 .colonne1,
 .colonne2 {
-    flex: 1; /* Partager l'espace disponible entre les deux colonnes */
-    padding: 0 30px; /* Ajouter un peu d'espace entre le contenu et les bords des colonnes */
+    flex: 1; 
+    padding: 0 30px; 
 }
 .colonne1 {
-    border-right: 1px solid white; /* Ajouter une bordure droite sur la première colonne */
-    padding-right: 70px; /* Ajouter un espacement à droite de la première colonne */
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid white; 
+    padding-right: 70px; 
 }
 
 .colonne2 {
-    padding-left: 70px; /* Ajouter un espacement à gauche de la deuxième colonne */
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px; 
 }
 .wpcf7-form-control-wrap{
     display: flex;
@@ -185,31 +167,31 @@ label{
     width: 39px !important;
     text-align: center !important;
     background-color: white !important;
-    font-size: 20px !important;
     padding-bottom: 15px !important;
     border-radius: 0 !important;
-   
+    margin-top: 10px !important;
+    font-size: 15px !important;
+    color: black;
+    padding: 0 !important;
 }
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button { 
-	-webkit-appearance: none;
-	margin:0;
+
+input .quantite{
+    font-size: 15px !important;
+
 }
 .page-container{
     margin-top: 0;
-    
+
 }
-.formule {
-    border-top: 1px solid white; /* Ajouter une bordure supérieure pour créer une ligne horizontale */
-    padding-top: 50px; /* Ajouter un espace au-dessus de la bordure */
+.formulaire {
+    border-top: 1px solid white; 
+    padding-top: 50px; 
 }
 .commander {
     display: flex !important;
     justify-content: center !important;
     margin-top: 40px;
     width: 100%;
-    
-    
 }
 #id-commander{
     background-color:#E0B9B4 !important;
@@ -223,4 +205,31 @@ input::-webkit-outer-spin-button {
 }
 .wpcf7-spinner {
     display: none;
+}
+#block-7{
+    display: flex;
+    justify-content: center;
+}
+.feuille{
+    margin-top: -40% !important;
+    margin-left: -25% !important;
+}
+
+
+
+@media screen and (max-width: 790px) {
+    .formulaire {
+        flex-direction: column !important; 
+    }
+    .colonne1{
+        padding: 0;
+        border-right: 0;
+    }
+    .colonne2{
+        padding: 0;
+    }
+    .case{
+        display: flex;
+        flex-direction: column !important;
+    }
 }
