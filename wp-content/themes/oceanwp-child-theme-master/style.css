@@ -214,7 +214,10 @@ input .quantite{
     margin-top: -40% !important;
     margin-left: -25% !important;
 }
-
+body{
+    width:100% !important; 
+    overflow-x:hidden !important;
+    }
 
 
 @media screen and (max-width: 790px) {
@@ -232,4 +235,8 @@ input .quantite{
         display: flex;
         flex-direction: column !important;
     }
+    div #ocean-mobile-search-1 .clr{
+        display: none;
+        padding: 0 !important;
+    }    
 }
